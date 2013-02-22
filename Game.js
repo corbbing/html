@@ -9,7 +9,7 @@ function boat(){
   
 }
 
-boat.draw = function(ctx){
+boat.prototype.draw = function(ctx){
   
   ctx.save();
   ctx.beginPath();
