@@ -98,6 +98,10 @@ function rect(){
 
 }
 
+function drawRect(rect){
+	
+}
+
 rect.draw=function(ctx){
 
 	this.bounds=rectMake(this.x, this.y, this.width, this.height);
