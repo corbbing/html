@@ -136,7 +136,35 @@ function dist3d(vec1, vec2){
 
 }
 
+function rAvg(data, factor){ //running average of an array
 
+	var avg = 0, out= [];
+	for (var i = 0; i < data.length - factor; ++i){
+	avg = 0;
+		for (var j = 0; j < factor; ++j){
+		
+			avg += data[j + i];
+		
+		}
+		avg/=factor;
+		out.push(avg);
+	}
+return out;
+
+}
+
+function drawArray(ctx,a,rect){
+
+	ctx.save();
+	ctx.beginPath();
+	ctx.moveTo(-1,rect.height / 2);
+	for (var i = 0; i < a.length; ++i){
+		ctx.lineTo((rect.width / a.length) * i, a[i] * rect.height);
+	}
+	ctx.stroke();
+	ctx.restore();
+
+}
 
 
 
