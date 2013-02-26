@@ -14,6 +14,12 @@
 //		   
 //Assissted by Garett Jernigan
 
+function avg(num1, num2){
+
+	return (num1 + num2) /2;
+
+}
+
 function pt2d(x,y){
 	return{x: x, y: y}; //return the values you input, but to an array.
 }
@@ -23,7 +29,6 @@ function pt3d(x,y,z){
 }
 
 //convert
-
 function mm2msec(x){
 
 	return x/3433.2672;
