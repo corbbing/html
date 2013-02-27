@@ -155,8 +155,11 @@ for (var i = 0; i < data.length - factor; ++i){
 	if (i > Math.round(factor / 2)){
 		out[i] = data[i] - out[i - (factor/2)] ;
 	}
-	avg/=factor;
 	
+	
+}
+for (var i = 0; i < data.length - factor; ++i){
+	out[i] /=factor;
 }
 return out;
 
