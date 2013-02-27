@@ -139,16 +139,25 @@ function dist3d(vec1, vec2){
 function rAvg(data, factor){ //running average of an array
 
 	var avg = 0, out= [];
-	for (var i = 0; i < data.length - factor; ++i){
+for (var i = 0; i < data.length - factor; ++i){
 	avg = 0;
+	if (i < factor / 2){
+		out[i] = 0;
+	}
+	if (i = factor / 2){
 		for (var j = 0; j < factor; ++j){
 		
-			avg += data[j + i];
+			avg += data[j +i];
 		
 		}
-		avg/=factor;
 		out.push(avg);
 	}
+	if (i > factor / 2){
+		out[i] = data[i] - out[i - (factor/2)] ;
+	}
+		//avg/=factor;
+	
+}
 return out;
 
 }
