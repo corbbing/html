@@ -172,7 +172,7 @@ function drawArray(ctx,a,rect){
 	ctx.beginPath();
 	ctx.moveTo(-1,rect.height / 2);
 	for (var i = 0; i < a.length; ++i){
-		ctx.lineTo((rect.width / a.length) * i, a[i] * rect.height);
+		ctx.lineTo((rect.width / a.length) * i + rect.x, a[i] * rect.height + rect.y);
 	}
 	ctx.stroke();
 	ctx.restore();
