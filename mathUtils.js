@@ -11,8 +11,6 @@
 //		   atics.
 //
 //Details: Building all code from the ground up.
-//		   
-//Assissted by Garett Jernigan
 
 function avg(num1, num2){
 
