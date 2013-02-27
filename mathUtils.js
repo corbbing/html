@@ -141,10 +141,10 @@ function rAvg(data, factor){ //running average of an array
 	var avg = 0, out= [];
 for (var i = 0; i < data.length - factor; ++i){
 	avg = 0;
-	if (i < factor / 2){
+	if (i < Math.round(factor / 2)){
 		out[i] = 0;
 	}
-	if (i = factor / 2){
+	if (i == Math.round(factor / 2)){
 		for (var j = 0; j < factor; ++j){
 		
 			avg += data[j +i];
@@ -152,10 +152,10 @@ for (var i = 0; i < data.length - factor; ++i){
 		}
 		out.push(avg);
 	}
-	if (i > factor / 2){
+	if (i > Math.round(factor / 2)){
 		out[i] = data[i] - out[i - (factor/2)] ;
 	}
-		//avg/=factor;
+	//avg/=factor;
 	
 }
 return out;
