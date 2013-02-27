@@ -135,7 +135,7 @@ function dist3d(vec1, vec2){
 	
 
 }
-
+/*
 function rAvg(data, factor){ //running average of an array
 
 	var avg = 0, out= [];
@@ -164,6 +164,7 @@ for (var i = 0; i < data.length - factor; ++i){
 return out;
 
 }
+*/
 
 function drawArray(ctx,a,rect){
 
